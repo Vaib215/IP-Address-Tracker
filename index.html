@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Address Tracker</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="script.js" defer></script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body>
+  <h1>IP Address Tracker</h1>
+  <div class="search_wrapper">
+    <input type="text" name="ip" placeholder="Search for any IP Address or domain">
+    <button class="submit">&gt;</button>
+  </div>
+  <div class="stats_wrapper">
+    <div class="stat">
+      <div class="title">Ip address</div>
+      <div class="value" id="ip">Loading...</div>
+    </div>
+    <!-- Vertical Rule -->
+    <div class="vertical_rule"></div>
+    <div class="stat">
+      <div class="title">Location</div>
+      <div class="value" id="locate">Loading...</div>
+    </div>
+    <!-- Vertical Rule -->
+    <div class="vertical_rule"></div>
+    <div class="stat">
+      <div class="title">Timezone</div>
+      <div class="value" id="timezone">Loading...</div>
+    </div>
+    <!-- Vertical Rule -->
+    <div class="vertical_rule"></div>
+    <div class="stat">
+      <div class="title">ISP</div>
+      <div class="value" id="isp">Loading...</div>
+    </div>
+  </div>
+  <div id='map'></div>
+</body>
+
+</html>

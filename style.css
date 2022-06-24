@@ -1,0 +1,136 @@
+/* importing rubik font with font wt 400, 500, 700 */
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,500,700);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url('./images/pattern-bg.png');
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1em;
+  font-weight: 500;
+}
+
+.search_wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.search_wrapper input {
+  font-family: 'Rubik', sans-serif;
+  padding: 1em 1.5em;
+  width: 24em;
+  border-radius: 0.75em 0 0 0.75em;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+}
+
+.search_wrapper .submit {
+  padding: 1em 1.25em;
+  outline:none;
+  border-radius: 0 0.75em 0.75em 0;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: hsl(0, 0%, 17%);
+  color: #fff;
+}
+
+.stats_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  background: #fff;
+  border-radius: 0.75em;
+  color: hsl(0, 0%, 17%);
+  padding: 2em;
+  z-index: 2;
+  gap: 2em;
+}
+
+.stat{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+  gap: 1em;
+  max-width: 16em;
+  max-height: 8em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.stat .title{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 0%, 59%);
+  font-size: 0.95rem;
+}
+
+.stat .value{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.vertical_rule {
+  width: 1px;
+  height: 6em;
+  background-color: hsl(0, 0%, 59%);
+  margin: 0 0.5em;
+}
+
+#map{
+  display: flex;
+  justify-content: center;
+  margin-top: -5em;
+  background: rgb(77, 74, 74);
+  color: hsl(0, 0%, 17%);
+  gap: 2em;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+}
+
+/* adding responsivess to stat_wrapper */
+@media screen and (max-width: 768px) {
+  .stats_wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+  .stat{
+    align-items: center;
+    justify-content: center;
+  }
+  .vertical_rule {
+    display: none;
+  }
+
+  #map{
+    margin-top: 1em;
+    height: 56em;
+  }
+  .search_wrapper{
+    width: 80%;
+  }
+}
